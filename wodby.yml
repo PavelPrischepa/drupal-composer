@@ -1,7 +1,9 @@
 pipeline:
-  - name: Install composer dependencies
+  - name: CMD1
     type: command
     directory: $APP_ROOT
-    command: |
-      composer clear-cache -vvv && \
-      composer install --no-interaction --optimize-autoloader --no-dev -vvv
+    command: composer clear-cache -vvv
+  - name: CMD2
+    type: command
+    directory: $APP_ROOT
+    command: composer install --no-dev -vvv
