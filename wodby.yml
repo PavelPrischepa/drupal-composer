@@ -1,5 +1,7 @@
 pipeline:
-- name: Install composer dependencies
-  type: command
-  command: composer install --no-interaction --optimize-autoloader -vvv
-  directory: $APP_ROOT
+  - name: Install composer dependencies
+    type: command
+    directory: $APP_ROOT
+    command: |
+      composer clear-cache
+      composer install --no-interaction --optimize-autoloader -vvv
