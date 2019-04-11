@@ -1,9 +1,5 @@
 pipeline:
-  - name: CMD1
+  - name: Install deps
     type: command
     directory: $APP_ROOT
-    command: composer clear-cache -vvv
-  - name: CMD2
-    type: command
-    directory: $APP_ROOT
-    command: composer install --no-dev -vvv
+    command: composer install -vvv
