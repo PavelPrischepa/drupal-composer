@@ -3,5 +3,5 @@ pipeline:
     type: command
     directory: $APP_ROOT
     command: |
-      composer clear-cache
+      composer clear-cache && \
       composer install --no-interaction --optimize-autoloader --no-dev -vvv
